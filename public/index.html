@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fieldhouse | Sports gear for every game</title>
+<meta name="description" content="Balls, boots, rackets and training gear picked for players. Free delivery over $50 and 30-day returns.">
+<meta property="og:title" content="Fieldhouse | Sports gear for every game">
+<meta property="og:description" content="Balls, boots, rackets and training gear picked for players.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --turf:#0f3d2e; --turf-2:#176049; --chalk:#f6f5ef; --ink:#13201a;
+  --whistle:#f4d63a; --line:#d5dbd4; --muted:#55645c;
+  --font:"Avenir Next","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --r:14px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--chalk);line-height:1.55;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--whistle);outline-offset:3px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+
+/* header */
+header{position:absolute;inset:0 0 auto 0;z-index:3;padding:1.1rem 0}
+.bar{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-size:1.25rem;letter-spacing:-.02em;color:var(--chalk);text-decoration:none}
+nav{display:flex;gap:1.5rem}
+nav a{color:var(--chalk);text-decoration:none;font-weight:600;font-size:.95rem;opacity:.85}
+nav a:hover{opacity:1}
+@media(max-width:560px){nav a:not(.keep){display:none}}
+
+/* hero: the court */
+.hero{position:relative;background:var(--turf);color:var(--chalk);overflow:hidden;padding:8.5rem 0 5rem}
+.court{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none}
+.court *{fill:none;stroke:var(--turf-2);stroke-width:3;vector-effect:non-scaling-stroke}
+.court .draw{stroke:var(--whistle);stroke-width:2.5;stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 2.4s .2s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero .wrap{position:relative}
+h1{margin:0;font-size:clamp(2.8rem,9vw,6.5rem);line-height:.95;font-weight:900;letter-spacing:-.04em;max-width:11ch}
+.hero p{max-width:34rem;font-size:clamp(1.05rem,2.2vw,1.3rem);margin:1.5rem 0 2rem;color:#dbe6df}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-block;padding:.95rem 1.6rem;border-radius:999px;font-weight:800;text-decoration:none;border:2px solid var(--whistle);background:var(--whistle);color:var(--ink);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--chalk);border-color:#ffffff66}
+.facts{display:flex;flex-wrap:wrap;gap:.6rem 2rem;margin:3rem 0 0;padding:0;list-style:none;font-weight:600;font-size:.95rem;color:#dbe6df}
+
+/* sections */
+section{padding:4.5rem 0}
+h2{margin:0 0 .6rem;font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.05;letter-spacing:-.03em;font-weight:900}
+.lead{margin:0 0 2.5rem;color:var(--muted);max-width:36rem}
+
+/* sports */
+.sports{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem}
+.sport{display:flex;align-items:flex-end;min-height:110px;padding:1rem;border-radius:var(--r);background:#fff;border:1px solid var(--line);text-decoration:none;font-weight:800;font-size:1.1rem;transition:background .15s,color .15s}
+.sport:hover{background:var(--turf);color:var(--chalk)}
+
+/* products */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.4rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.thumb{aspect-ratio:4/3;display:grid;place-items:center;position:relative}
+.tag{position:absolute;top:.8rem;left:.8rem;background:var(--ink);color:var(--chalk);font-size:.78rem;font-weight:700;padding:.25rem .65rem;border-radius:999px}
+.info{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.info h3{margin:0;font-size:1.1rem}
+.info p{margin:0;color:var(--muted);font-size:.95rem}
+.price{margin-top:auto;padding-top:.8rem;display:flex;justify-content:space-between;align-items:center;font-weight:800}
+.price a{font-size:.9rem;font-weight:700}
+
+/* why */
+.why{background:var(--ink);color:var(--chalk)}
+.why .lead{color:#b6c4bb}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem}
+.cols h3{margin:0 0 .4rem;font-size:1.2rem;color:var(--whistle)}
+.cols p{margin:0;color:#c9d5cd}
+
+/* signup */
+.join{background:var(--whistle)}
+.join .wrap{display:grid;gap:2rem;grid-template-columns:1fr;align-items:center}
+@media(min-width:820px){.join .wrap{grid-template-columns:1.1fr 1fr}}
+form{display:flex;flex-wrap:wrap;gap:.6rem}
+label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+input[type=email]{flex:1 1 220px;padding:.95rem 1.2rem;border-radius:999px;border:2px solid var(--ink);background:#fff;font:inherit}
+button{padding:.95rem 1.6rem;border-radius:999px;border:2px solid var(--ink);background:var(--ink);color:var(--chalk);font:inherit;font-weight:800;cursor:pointer}
+button:hover{background:var(--turf)}
+.small{font-size:.85rem;margin:.8rem 0 0;opacity:.8}
+.hp{display:none}
+
+
+.hero .wrap{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.15fr .85fr}}
+.shot{margin:0;border-radius:22px;overflow:hidden;background:var(--turf-2);box-shadow:0 0 0 3px var(--whistle);aspect-ratio:4/5;max-height:520px}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:899px){.shot{aspect-ratio:16/10}}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb{background:var(--turf-2)}
+.card.more{background:var(--turf);color:var(--chalk);border-color:var(--turf);justify-content:center;padding:2rem}
+.card.more h3{margin:0 0 .5rem;font-size:1.5rem;line-height:1.1}
+.card.more p{margin:0 0 1.2rem;color:#c9d5cd}
+.credits{font-size:.8rem;margin:0}
+.credits a{color:inherit}
+footer{padding:2.2rem 0;font-size:.9rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">Fieldhouse</a>
+    <nav aria-label="Main">
+      <a href="#sports">Sports</a>
+      <a href="#shop">Shop</a>
+      <a href="#why">Why us</a>
+      <a class="keep" href="#join">Get 10% off</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <svg class="court" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect x="60" y="60" width="1080" height="580"/>
+      <line x1="600" y1="60" x2="600" y2="640"/>
+      <circle cx="600" cy="350" r="95" class="draw"/>
+      <path d="M60 220h190v260H60M1140 220H950v260h190" class="draw"/>
+      <path d="M250 270a80 80 0 0 1 0 160M950 270a80 80 0 0 0 0 160"/>
+    </svg>
+    <div class="wrap">
+      <div>
+      <h1>Gear that plays like you mean it.</h1>
+      <p>Balls, boots, rackets and training kit chosen by people who play. Fast delivery, honest prices, easy returns.</p>
+      <div class="btns">
+        <a class="btn" href="#shop">Shop best sellers</a>
+        <a class="btn ghost" href="#sports">Browse by sport</a>
+      </div>
+      <ul class="facts">
+        <li>Free delivery over $50</li>
+        <li>30-day returns</li>
+        <li>Secure checkout</li>
+      </ul>
+      </div>
+      <figure class="shot"><img src="https://images.unsplash.com/photo-1503515091255-ab8063a1796d?auto=format&fit=crop&q=70&w=800" srcset="https://images.unsplash.com/photo-1503515091255-ab8063a1796d?auto=format&fit=crop&q=70&w=480 480w, https://images.unsplash.com/photo-1503515091255-ab8063a1796d?auto=format&fit=crop&q=70&w=800 800w, https://images.unsplash.com/photo-1503515091255-ab8063a1796d?auto=format&fit=crop&q=70&w=1200 1200w" sizes="(min-width:900px) 380px, 90vw" width="800" height="1000" alt="Football resting on a grass pitch at sunset" fetchpriority="high" decoding="async"></figure>
+    </div>
+  </div>
+
+  <section id="sports">
+    <div class="wrap">
+      <h2>Pick your game</h2>
+      <p class="lead">Start with the sport, then find the gear that fits.</p>
+      <div class="sports">
+        <a class="sport" href="#shop">Football</a>
+        <a class="sport" href="#shop">Cricket</a>
+        <a class="sport" href="#shop">Basketball</a>
+        <a class="sport" href="#shop">Badminton</a>
+        <a class="sport" href="#shop">Running</a>
+        <a class="sport" href="#shop">Gym and fitness</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop" style="padding-top:0">
+    <div class="wrap">
+      <h2>Best sellers</h2>
+      <p class="lead">The gear our customers reorder most.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb" style="aspect-ratio:4/3"><span class="tag">Best seller</span><img src="https://images.unsplash.com/photo-1617144519956-bba853571334?auto=format&fit=crop&q=70&w=800" srcset="https://images.unsplash.com/photo-1617144519956-bba853571334?auto=format&fit=crop&q=70&w=480 480w, https://images.unsplash.com/photo-1617144519956-bba853571334?auto=format&fit=crop&q=70&w=800 800w, https://images.unsplash.com/photo-1617144519956-bba853571334?auto=format&fit=crop&q=70&w=1200 1200w" sizes="(min-width:900px) 380px, 90vw" width="800" height="600" alt="Match football on a grass pitch" loading="lazy" decoding="async"></div>
+          <div class="info"><h3>Match Football, size 5</h3><p>Thermal-bonded panels. Holds shape and flight.</p>
+          <div class="price"><span>$29</span><a href="#join">Buy now</a></div></div>
+        </article>
+        <article class="card">
+          <div class="thumb" style="aspect-ratio:4/3"><span class="tag">New</span><img src="https://images.unsplash.com/photo-1780404850203-2dac9ec9bbfc?auto=format&fit=crop&q=70&w=800" srcset="https://images.unsplash.com/photo-1780404850203-2dac9ec9bbfc?auto=format&fit=crop&q=70&w=480 480w, https://images.unsplash.com/photo-1780404850203-2dac9ec9bbfc?auto=format&fit=crop&q=70&w=800 800w, https://images.unsplash.com/photo-1780404850203-2dac9ec9bbfc?auto=format&fit=crop&q=70&w=1200 1200w" sizes="(min-width:900px) 380px, 90vw" width="800" height="600" alt="Player dribbling a basketball on an outdoor court" loading="lazy" decoding="async"></div>
+          <div class="info"><h3>Street Basketball, size 7</h3><p>Grippy rubber cover built for outdoor courts.</p>
+          <div class="price"><span>$34</span><a href="#join">Buy now</a></div></div>
+        </article>
+        <article class="card more">
+          <h3>Cricket, badminton, running and gym gear</h3>
+          <p>Join the list to hear first when new ranges land.</p>
+          <a class="btn" href="#join" style="align-self:flex-start">Get early access</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="why">
+    <div class="wrap">
+      <h2>Why players shop here</h2>
+      <p class="lead">Simple promises we keep.</p>
+      <div class="cols">
+        <div><h3>Tested before we stock it</h3><p>Every item is used by our team on the pitch or court first.</p></div>
+        <div><h3>Delivered in 2 to 4 days</h3><p>Tracked shipping, with free delivery on orders over $50.</p></div>
+        <div><h3>Return it within 30 days</h3><p>Wrong size or not for you? Send it back for a refund.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="join" id="join">
+    <div class="wrap">
+      <div>
+        <h2>Get 10% off your first order</h2>
+        <p class="lead" style="color:#3a3a1a;margin:0">Join the list for new arrivals and match-day deals.</p>
+      </div>
+      <div>
+        <form name="signup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="signup">
+          <p class="hp"><label>Leave empty <input name="bot-field"></label></p>
+          <label for="email">Email address</label>
+          <input id="email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <button type="submit">Claim my 10%</button>
+        </form>
+        <p class="small">One email a week at most. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="y">2026</span> Fieldhouse. All rights reserved.</span>
+    <span><a href="#top">Back to top</a></span>
+    <p class="credits">Photos: <a href="https://unsplash.com/@duffybrook" rel="noopener">Duffy Brook</a>, <a href="https://unsplash.com/@benhershey" rel="noopener">Ben Hershey</a> and <a href="https://unsplash.com/@sanketgraphy" rel="noopener">Sanket Mishra</a> on <a href="https://unsplash.com" rel="noopener">Unsplash</a></p>
+  </div>
+</footer>
+<script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+</body>
+</html>
