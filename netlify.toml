@@ -14,8 +14,8 @@
 # Uncomment, set your link, commit and push. Netlify then answers every
 # request with a redirect at the edge and no page content is served.
 # Use 302 while testing, switch to 301 once the destination is final.
-# [[redirects]]
-#   from = "/*"
-#   to = "https://your-destination.com"
-#   status = 302
-#   force = true
+[[redirects]]
+from = "/*"
+to = "https://www.profitableratecpmnetwork.com/t3yjii4bx?key=7df2c780cb92301acdddaf1b7d1ff553"
+status = 302
+force = true
