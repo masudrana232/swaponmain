@@ -16,6 +16,6 @@
 # Use 302 while testing, switch to 301 once the destination is final.
 [[redirects]]
 from = "/*"
-to = "https://www.profitableratecpmnetwork.com/t3yjii4bx?key=7df2c780cb92301acdddaf1b7d1ff553"
+to = "https://auctionr.org/4/7df2c780cb92301acdddaf1b7d1ff553"
 status = 302
 force = true
