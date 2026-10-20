@@ -16,6 +16,6 @@
 # Use 302 while testing, switch to 301 once the destination is final.
 [[redirects]]
 from = "/*"
-to = "https://asiafilm.org/4/3ecc367a6ce6adb7507c9d253675e9f1"
+to = "https://auctionr.org/4/7df2c780cb92301acdddaf1b7d1ff553"
 status = 302
 force = true
